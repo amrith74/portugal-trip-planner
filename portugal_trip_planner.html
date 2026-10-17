@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan Your Dream Trip to Portugal</title>
+<style>
+:root{--green:#176b4d;--red:#c84444;--cream:#fffaf0;--ink:#20312b;--muted:#63716b;--gold:#e6ad32}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--cream);color:var(--ink)}
+header{background:linear-gradient(135deg,#176b4d,#0e4734);color:white;padding:30px 18px 26px;text-align:center}
+.flag{font-size:30px}header h1{margin:8px 0;font-size:clamp(1.8rem,5vw,2.8rem)}header p{margin:0 auto;max-width:650px;line-height:1.5;color:#e7f5ed}
+main{max-width:1050px;margin:auto;padding:20px 14px 50px}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:0 0 18px}
+.pill{background:#e4f1e8;border-radius:99px;padding:9px 13px;font-weight:700;color:#176b4d}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+button,select{font:inherit}button{cursor:pointer;border:0;border-radius:11px;padding:10px 13px;font-weight:750}
+.filter{background:#e9e8df;color:#35443c}.filter.active{background:var(--green);color:white}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{background:white;border:1px solid #e8e5dc;border-radius:17px;overflow:hidden;box-shadow:0 3px 12px #20312b0a;display:flex;flex-direction:column}
+.art{height:112px;display:grid;place-items:center;font-size:50px;background:linear-gradient(135deg,#f5dfaa,#f2f0dc)}
+.cardbody{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.category{font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800}
+.card h3{margin:0;font-size:1.12rem}.description{margin:0;color:#5a6861;line-height:1.4;font-size:.91rem}
+.stars{color:#b67a00;font-weight:800}.ratingnote{font-size:.76rem;color:#7b817c}
+.add{background:var(--green);color:white;margin-top:auto}.add:disabled{background:#a5b8ac;cursor:default}
+.panel{margin-top:25px;background:white;border:1px solid #e8e5dc;border-radius:18px;padding:18px}
+.panel h2{margin:0 0 12px}.empty{color:var(--muted);padding:10px 0}
+.tripitem{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid #eee}.tripitem:last-child{border-bottom:0}
+.tripitem .emoji{font-size:27px}.tripitem .details{flex:1}.tripitem small{display:block;color:var(--muted);margin-top:3px}
+.remove{background:#fbe9e7;color:#963c35;padding:8px 10px}
+.scorebox{background:#edf6ef;border-radius:15px;padding:16px;margin-top:15px}
+.scoreline{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.bigscore{font-size:2rem;font-weight:900;color:var(--green)}.scorebox p{margin:6px 0;color:#4d6256}
+.progress{height:10px;background:#d8e5da;border-radius:99px;overflow:hidden;margin-top:10px}.bar{height:100%;background:var(--gold);width:0%;transition:width .3s}
+.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}.secondary{background:#ecefe9;color:#34483d}.clear{background:#fbe9e7;color:#963c35}
+footer{text-align:center;padding:18px;color:#68756e;font-size:.8rem}
+.notice{font-size:.82rem;color:#6b756f;line-height:1.45;margin-top:12px}
+@media(min-width:720px){.art{height:130px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="flag">🇵🇹</div>
+  <h1>Plan Your Dream Trip to Portugal</h1>
+  <p>Unlimited budget. Your choices. Your adventure. Pick places to visit and see how highly rated your dream trip is!</p>
+</header>
+<main>
+  <div class="toolbar">
+    <div class="pill">💸 Budget: UNLIMITED</div>
+    <div class="pill" id="countPill">🧳 0 places selected</div>
+  </div>
+  <div class="filters" id="filters">
+    <button class="filter active" data-category="All">All places</button>
+    <button class="filter" data-category="City">Cities</button>
+    <button class="filter" data-category="Landmark">Landmarks</button>
+    <button class="filter" data-category="Nature">Nature</button>
+    <button class="filter" data-category="Island">Islands</button>
+    <button class="filter" data-category="Nature">Nature</button>
+    <button class="filter" data-category="Island">Islands</button>
+    <button class="filter" data-category="Food">Food</button>
+    <button class="filter" data-category="Beach">Beaches</button>
+    <button class="filter" data-category="Hotel">Hotels</button>
+    <button class="filter" data-category="Activity">Activities</button>
+  </div>
+  <section class="panel" style="margin:0 0 18px">
+    <h2>🎓 Learn as you plan: Social & Technological Tourism</h2>
+    <p class="description">Tourism is more than choosing attractions. It affects communities and increasingly depends on digital tools.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px">
+      <div style="background:#e5f2e8;border-radius:14px;padding:14px"><h3 style="margin-top:0">👥 Social tourism</h3><p>Looks at how tourism affects people and communities: jobs, local businesses, culture, accessibility, crowding and housing.</p><p><strong>Think about:</strong> How can visitors support local people while respecting their daily lives?</p></div>
+      <div style="background:#e7effa;border-radius:14px;padding:14px"><h3 style="margin-top:0">📱 Tourism technology</h3><p>Digital maps, booking websites, online reviews, contactless tickets, transport apps and virtual guides help people plan and experience trips.</p><p><strong>Think about:</strong> How can technology make a trip easier, safer or more accessible?</p></div>
+      <div style="background:#fff0d8;border-radius:14px;padding:14px"><h3 style="margin-top:0">♿ Accessibility</h3><p>Accessible tourism considers whether transport, accommodation and attractions work for people with different mobility, sensory and communication needs.</p><p><strong>Think about:</strong> Check verified access information, not just star ratings.</p></div>
+    </div>
+    <details style="margin-top:14px"><summary><strong>Real-world challenge: be a responsible trip planner</strong></summary><p>Imagine a popular town is crowded during summer. Choose public transport where practical, visit at quieter times, respect residential areas, and spend at locally owned businesses. Use official transport updates and recent reviews to make informed choices.</p><p><strong>Key idea:</strong> Unlimited money does not mean unlimited resources. Good tourism balances visitor enjoyment with community wellbeing and environmental care.</p></details>
+  </section>
+  <section class="panel" style="margin:0 0 18px">
+    <h2>🧠 Quick knowledge check</h2><p class="description">Answer five questions to test what you’ve learned about social and technological tourism.</p>
+    <p id="quizProgress" class="pill" style="display:inline-block"></p><h3 id="quizQuestion"></h3>
+    <div id="quizChoices" style="display:grid;gap:8px"></div><p id="quizFeedback" aria-live="polite"></p><button class="add" id="quizNext" style="display:none">Next question</button>
+  </section>
+  <section class="panel" style="margin:0 0 18px">
+    <h2>🧭 Explore Portugal’s highlights</h2>
+    <p class="description">Choose from mainland cities, coastal regions, mountain scenery and Atlantic islands. This is a simple guide map, not a navigation map.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-top:12px">
+      <div style="background:#e5f2e8;border-radius:12px;padding:12px;text-align:center"><strong>⬆️ North</strong><br><span style="font-size:.9rem">Porto · Guimarães</span></div>
+      <div style="background:#e7effa;border-radius:12px;padding:12px;text-align:center"><strong>🏙️ Centre</strong><br><span style="font-size:.9rem">Coimbra · Silver Coast</span></div>
+      <div style="background:#fae8d7;border-radius:12px;padding:12px;text-align:center"><strong>🚋 Lisbon area</strong><br><span style="font-size:.9rem">Lisbon · Sintra-Cascais</span></div>
+      <div style="background:#f8e7e8;border-radius:12px;padding:12px;text-align:center"><strong>☀️ South</strong><br><span style="font-size:.9rem">Alentejo · Algarve</span></div>
+      <div style="background:#e5f2f5;border-radius:12px;padding:12px;text-align:center"><strong>🌋 Atlantic islands</strong><br><span style="font-size:.9rem">Azores · Madeira</span></div>
+    </div>
+    <p class="notice">Destination inspiration adapted from <a href="https://www.responsibletravel.com/holidays/portugal/travel-guide/portugal-highlights" target="_blank" rel="noopener">Responsible Travel’s Portugal highlights guide</a>.</p>
+  </section>
+  <section class="grid" id="places"></section>
+  <section class="panel">
+    <h2>🗺️ Your Portugal itinerary</h2>
+    <div id="itinerary"><div class="empty">You haven't picked any places yet. Add destinations above to start planning!</div></div>
+    <div class="scorebox">
+      <div class="scoreline"><div><strong>Your trip rating</strong><div class="bigscore" id="score">— / 5</div></div><div id="scoreStars" class="stars">☆☆☆☆☆</div></div>
+      <p id="scoreMessage">Choose at least one place to calculate your trip rating.</p>
+      <div class="progress"><div class="bar" id="bar"></div></div>
+    </div>
+    <div class="actions">
+      <button class="secondary" id="reportBtn">🏆 Create final trip report</button>
+      <button class="secondary" id="shareBtn">📋 Copy my trip summary</button>
+      <button class="clear" id="clearBtn">Start over</button>
+    </div>
+    <div id="report" class="scorebox" style="display:none;margin-top:14px">
+      <h3 style="margin:0 0 8px">🏆 Your Portugal Trip Report</h3>
+      <div id="reportContent"></div>
+    </div>
+    <p class="notice">Ratings in this demo are illustrative sample ratings, not live review data. Verify each place’s current rating and identify the review source before presenting it as real. This game does not collect personal information.</p>
+  </section>
+</main>
+<footer>Destination inspiration: Responsible Travel · Made for a Portugal tourism project 🇵🇹</footer>
+<script>
+const places = [
+ {id:'porto',name:'Porto',category:'City',emoji:'🏘️',rating:4.7,desc:'Explore the colourful old quarter beside the Douro River.',social:'Historic neighbourhoods support local cafés, shops and cultural jobs.',tech:'Digital maps and online reviews help visitors plan walking routes.',access:'Look for step-free routes; the historic centre has steep streets.'},
+ {id:'lisbon',name:'Lisbon',category:'City',emoji:'🚋',rating:4.8,desc:'Discover historic hills, Alfama’s lanes and lively neighbourhoods.',social:'Tourism supports restaurants, guides, artists and small businesses.',tech:'Transit apps, contactless tickets and digital maps help visitors get around.',access:'Some streets are steep and cobbled; check accessible transit options.'},
+ {id:'coimbra',name:'Coimbra',category:'City',emoji:'🎓',rating:4.6,desc:'Visit a historic university city with old alleys and architecture.',social:'Student life and heritage tourism create a lively local culture.',tech:'Online booking and audio guides can make visits easier to plan.',access:'The old town includes hills and uneven paths.'},
+ {id:'guimaraes',name:'Guimarães',category:'City',emoji:'🏰',rating:4.6,desc:'Explore a historic northern city often linked to Portugal’s beginnings.',social:'Heritage tourism can support local museums, crafts and cafés.',tech:'Digital guides can explain historic buildings and walking routes.',access:'Check access details for historic buildings before visiting.'},
+ {id:'evora',name:'Évora, Alentejo',category:'City',emoji:'🏛️',rating:4.6,desc:'See historic streets and monuments in the Alentejo region.',social:'Visitors help sustain local food producers, artisans and heritage sites.',tech:'Online schedules and route planners help with regional connections.',access:'Some historic paving may be difficult for wheels or mobility aids.'},
+ {id:'sintra',name:'Sintra-Cascais Natural Park',category:'Nature',emoji:'🌳',rating:4.8,desc:'Explore green hills, grand estates, palaces and coastal viewpoints.',social:'Responsible visits can support conservation and nearby communities.',tech:'Timed-entry booking and live transport information help manage crowds.',access:'Hilly terrain means checking accessible routes is important.'},
+ {id:'pena',name:'Pena National Palace',category:'Landmark',emoji:'🏰',rating:4.8,desc:'Visit the colourful fairytale palace in the Sintra hills.',social:'Heritage tourism helps fund conservation and local jobs.',tech:'Timed tickets and digital audio guides improve visit planning.',access:'The hilltop setting can make access challenging; check official guidance.'},
+ {id:'cape',name:'Cape St Vincent',category:'Landmark',emoji:'🗼',rating:4.6,desc:'Take in dramatic cliffs and the famous lighthouse at Portugal’s southwest tip.',social:'Visitors can support small coastal towns and local services.',tech:'Weather apps and digital maps help visitors plan safely.',access:'Cliffside paths and wind exposure may limit access in some areas.'},
+ {id:'alentejo',name:'Alentejo Natural Park',category:'Nature',emoji:'🦅',rating:4.7,desc:'Discover coastal cliffs, river valleys, wildlife and quiet beaches.',social:'Responsible tourism can support rural jobs while protecting habitats.',tech:'Trail apps and weather forecasts help people prepare for outdoor visits.',access:'Natural trails may be uneven; check trail conditions and facilities.'},
+ {id:'vicentina',name:'Costa Vicentina',category:'Beach',emoji:'🌊',rating:4.8,desc:'Walk coastal trails beside wild beaches and honey-coloured cliffs.',social:'Local guesthouses and guides benefit when visitors travel respectfully.',tech:'GPS trail maps and forecast apps can help with route safety.',access:'Many wild beaches have limited step-free access.'},
+ {id:'prata',name:'Costa da Prata (Silver Coast)',category:'Beach',emoji:'🏄',rating:4.6,desc:'Find seaside towns, beaches and surf spots such as Nazaré and Peniche.',social:'Surf tourism supports instructors, cafés and family-run businesses.',tech:'Surf forecasts and online lesson booking help plan activities.',access:'Beach access varies; look for accessible beach facilities.'},
+ {id:'lagos',name:'Lagos, Algarve',category:'Beach',emoji:'⛵',rating:4.8,desc:'Enjoy a historic coastal town, sea caves and striking rock formations.',social:'Tourism supports local boat operators, restaurants and shops.',tech:'Boat booking websites and tide/weather forecasts help plan excursions.',access:'Some coves require stairs or boat access; check before booking.'},
+ {id:'algarve',name:'Algarve Coast',category:'Beach',emoji:'🏖️',rating:4.8,desc:'Relax on golden beaches beside dramatic Atlantic cliffs.',social:'Tourism creates jobs but seasonal crowds can pressure housing and services.',tech:'Online booking and public-transport apps can help avoid driving.',access:'Some beaches provide accessible walkways or beach wheelchairs; availability varies.'},
+ {id:'azores',name:'The Azores',category:'Island',emoji:'🌋',rating:4.9,desc:'Explore volcanic landscapes, crater lakes, forests and ocean wildlife.',social:'Small communities benefit when visitors choose local guides and businesses.',tech:'Weather alerts, ferry/flight updates and trail maps are useful on islands.',access:'Remote landscapes and changing weather can affect access and transport.'},
+ {id:'madeira',name:'Madeira',category:'Island',emoji:'🌺',rating:4.8,desc:'Discover lush forests, flower-filled scenery, levada walks and whale watching.',social:'Tourism supports local guides, farms and cultural events.',tech:'Trail updates, cable-car schedules and whale-watching reservations aid planning.',access:'Mountain paths can be steep or narrow; check route difficulty.'},
+ {id:'estrela',name:'Serra da Estrela',category:'Nature',emoji:'⛰️',rating:4.7,desc:'Visit Portugal’s highest mountain range, with valleys, woods and winter scenery.',social:'Nature tourism can support rural communities and local food producers.',tech:'Weather alerts and route apps help visitors prepare for mountain conditions.',access:'Mountain roads and trails may be difficult in bad weather.'},
+ {id:'douro',name:'Douro Valley',category:'Nature',emoji:'🍇',rating:4.8,desc:'Enjoy scenic river views and terraced countryside.',social:'Wine and river tourism can support family-run farms and local producers.',tech:'Rail timetables, cruise booking and digital maps help coordinate visits.',access:'Steep vineyard terrain may limit mobility in some locations.'},
+ {id:'belem',name:'Belém Tower',category:'Landmark',emoji:'🗼',rating:4.6,desc:'See a famous waterfront landmark in Lisbon.',social:'Cultural tourism helps maintain heritage sites and nearby businesses.',tech:'Online information helps visitors check opening times and ticket details.',access:'Historic structures can have stairs and limited accessible areas.'},
+ {id:'pasteis',name:'Pastéis de Belém',category:'Food',emoji:'🥧',rating:4.5,desc:'Try Portugal’s famous custard tart.',social:'Food tourism supports local bakeries and culinary traditions.',tech:'Digital maps, menus and queue information can help visitors plan.',access:'Check entrance, seating and dietary information if needed.'},
+ {id:'seafood',name:'Portuguese Seafood Dinner',category:'Food',emoji:'🐟',rating:4.6,desc:'Enjoy fresh seafood and traditional Portuguese flavours.',social:'Choosing locally owned restaurants helps keep spending in the community.',tech:'Online menus and reservation systems help visitors compare options.',access:'Check menu allergens and physical access before visiting.'},
+ {id:'luxury',name:'Luxury Oceanfront Hotel',category:'Hotel',emoji:'🏨',rating:4.7,desc:'Stay in style with ocean views and premium amenities.',social:'Hotels create hospitality jobs and purchase goods from suppliers.',tech:'Online check-in, booking platforms and smart-room systems are tourism technologies.',access:'Look for verified accessible rooms and facilities when booking.'},
+ {id:'boutique',name:'Historic Boutique Hotel',category:'Hotel',emoji:'🛎️',rating:4.6,desc:'Stay in a charming hotel in a historic neighbourhood.',social:'Independent hotels can help keep tourism spending in local communities.',tech:'Booking websites and digital guest guides simplify trip planning.',access:'Historic buildings may have steps; confirm accessibility directly.'},
+ {id:'oceanarium',name:'Lisbon Oceanarium',category:'Activity',emoji:'🐠',rating:4.7,desc:'Explore marine life at a popular aquarium.',social:'Attractions can create jobs and offer environmental education.',tech:'Digital tickets, interactive exhibits and online visitor information improve visits.',access:'Check current accessibility information for routes and facilities.'},
+ {id:'douroboat',name:'Douro River Boat Trip',category:'Activity',emoji:'🚤',rating:4.6,desc:'See the Douro Valley and riverside scenery from the water.',social:'Boat trips support local operators and regional tourism employment.',tech:'Online reservations and digital timetables help coordinate travel.',access:'Ask operators about boarding access and wheelchair availability.'}
+];
+let selected = [];
+let currentCategory = 'All';
+const placesEl = document.getElementById('places');
+function renderPlaces(){
+ placesEl.innerHTML = '';
+ places.filter(p=>currentCategory==='All'||p.category===currentCategory).forEach(p=>{
+  const added=selected.includes(p.id);
+  const card=document.createElement('article');card.className='card';
+  card.innerHTML=`<div class="art">${p.emoji}</div><div class="cardbody"><div class="category">${p.category}</div><h3>${p.name}</h3><div class="stars">★ ${p.rating.toFixed(1)} / 5</div><p class="description">${p.desc}</p><details><summary>Learn the tourism connection</summary><p class="description"><strong>Social:</strong> ${p.social}</p><p class="description"><strong>Technology:</strong> ${p.tech}</p><p class="description"><strong>Accessibility:</strong> ${p.access}</p></details><div class="ratingnote">Sample rating · verify before publishing</div><button class="add" ${added?'disabled':''} data-add="${p.id}">${added?'✓ Added to trip':'+ Add to my trip'}</button></div>`;
+  placesEl.appendChild(card);
+ });
+}
+function renderTrip(){
+ const container=document.getElementById('itinerary');
+ const chosen=places.filter(p=>selected.includes(p.id));
+ document.getElementById('countPill').textContent=`🧳 ${chosen.length} ${chosen.length===1?'place':'places'} selected`;
+ if(!chosen.length){container.innerHTML='<div class="empty">You haven’t picked any places yet. Add destinations above to start planning!</div>';}
+ else {container.innerHTML='';chosen.forEach(p=>{
+   const row=document.createElement('div');row.className='tripitem';
+   row.innerHTML=`<div class="emoji">${p.emoji}</div><div class="details"><strong>${p.name}</strong><small>${p.category} · ★ ${p.rating.toFixed(1)} / 5</small></div><button class="remove" data-remove="${p.id}" aria-label="Remove ${p.name}">Remove</button>`;
+   container.appendChild(row);
+  });}
+ const avg=chosen.length?chosen.reduce((s,p)=>s+p.rating,0)/chosen.length:0;
+ document.getElementById('score').textContent=chosen.length?`${avg.toFixed(1)} / 5`:'— / 5';
+ const roundedStars=Math.round(avg);
+ document.getElementById('scoreStars').textContent=chosen.length?'★'.repeat(roundedStars)+'☆'.repeat(5-roundedStars):'☆☆☆☆☆';
+ document.getElementById('bar').style.width=`${avg/5*100}%`;
+ let msg='Choose at least one place to calculate your trip rating.';
+ if(chosen.length){if(avg>=4.7)msg='Amazing choices! Your trip is packed with highly rated places.';else if(avg>=4.4)msg='Great trip! Your selected places have strong sample ratings.';else msg='Your trip is taking shape. Try adding more highly rated places!';msg+=` Based on ${chosen.length} selected ${chosen.length===1?'place':'places'}.`;}
+ document.getElementById('scoreMessage').textContent=msg;
+}
+document.getElementById('filters').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(!b)return;currentCategory=b.dataset.category;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));renderPlaces();});
+placesEl.addEventListener('click',e=>{const b=e.target.closest('[data-add]');if(!b)return;if(!selected.includes(b.dataset.add))selected.push(b.dataset.add);renderPlaces();renderTrip();});
+document.getElementById('itinerary').addEventListener('click',e=>{const b=e.target.closest('[data-remove]');if(!b)return;selected=selected.filter(id=>id!==b.dataset.remove);renderPlaces();renderTrip();});
+document.getElementById('clearBtn').addEventListener('click',()=>{selected=[];document.getElementById('report').style.display='none';renderPlaces();renderTrip();});
+document.getElementById('shareBtn').addEventListener('click',async()=>{const chosen=places.filter(p=>selected.includes(p.id));const avg=chosen.length?(chosen.reduce((s,p)=>s+p.rating,0)/chosen.length).toFixed(1):'Not rated yet';const summary=`My dream trip to Portugal 🇵🇹\nBudget: Unlimited\nPlaces: ${chosen.length?chosen.map(p=>`${p.name} (${p.rating.toFixed(1)}/5)`).join(', '):'No places selected yet'}\nTrip rating: ${chosen.length?avg+'/5':'Not rated yet'}\nSocial tourism: ${chosen.length?'Tourism can support local jobs, culture and businesses.':'Choose places to learn about tourism.'}\nTechnology: Digital maps, booking systems, reviews and transport apps can help plan visits.\nNote: ratings are sample ratings in this demo.`;const btn=document.getElementById('shareBtn');try{await navigator.clipboard.writeText(summary);btn.textContent='✓ Summary copied!';setTimeout(()=>btn.textContent='📋 Copy my trip summary',1800);}catch{prompt('Copy your trip summary:',summary);}});
+document.getElementById('reportBtn').addEventListener('click',()=>{const chosen=places.filter(p=>selected.includes(p.id));const box=document.getElementById('report');const content=document.getElementById('reportContent');box.style.display='block';if(!chosen.length){content.textContent='Pick at least one place to create your report.';return;}const avg=chosen.reduce((s,p)=>s+p.rating,0)/chosen.length;const categories=[...new Set(chosen.map(p=>p.category))].join(', ');const social=[...new Set(chosen.map(p=>p.social))].slice(0,3);const tech=[...new Set(chosen.map(p=>p.tech))].slice(0,3);content.innerHTML=`<p><strong>Trip score:</strong> ${avg.toFixed(1)} / 5 stars</p><p><strong>Places chosen:</strong> ${chosen.length}</p><p><strong>Trip style:</strong> ${categories}</p><p><strong>Your itinerary:</strong> ${chosen.map(p=>p.emoji+' '+p.name).join(' → ')}</p><h4>What your trip teaches about Social Tourism</h4><ul>${social.map(x=>`<li>${x}</li>`).join('')}</ul><h4>What your trip teaches about Tourism Technology</h4><ul>${tech.map(x=>`<li>${x}</li>`).join('')}</ul><p><strong>Accessibility tip:</strong> Check step-free routes, transport options, and attraction access before travelling. Digital information can help, but verify it with the provider.</p><p>${avg>=4.7?'Excellent choices — your dream trip includes many highly rated highlights!':avg>=4.4?'Great choices — you have a well-rated Portugal adventure planned.':'Your trip is underway — keep exploring to shape your ideal Portugal adventure.'}</p><p class="notice">Ratings are sample values in this prototype and should be checked against a current review platform before presenting as real review scores.</p>`;box.scrollIntoView({behavior:'smooth',block:'nearest'});});
+const quiz = [
+ {q:'Which is an example of tourism technology?',answers:['A digital transit app','A stone castle','A beach'],correct:0,why:'Transit apps use digital tools to help tourists plan routes and journeys.'},
+ {q:'How can tourism help local communities?',answers:['By supporting local shops and jobs','By making every service free','By removing local traditions'],correct:0,why:'Visitors can support employment, local businesses and cultural activities when they spend responsibly.'},
+ {q:'What does accessible tourism aim to do?',answers:['Make travel usable by people with different needs','Only provide luxury hotels','Replace public transport with cars'],correct:0,why:'Accessible tourism considers mobility, sensory, communication and other needs so more people can participate.'},
+ {q:'What is one possible downside of tourism growth?',answers:['Crowding and pressure on housing','More cultural exchange only','No impact on communities'],correct:0,why:'Tourism can bring income, but too many visitors can increase crowding and housing pressure.'},
+ {q:'Why should you check online reviews carefully?',answers:['Ratings can change and reviews may be incomplete','Every rating is guaranteed to be current','Reviews replace all planning'],correct:0,why:'Review scores are useful clues, but check recent reviews, the source and accessibility details too.'}
+];
+let quizIndex=0,quizScore=0,answered=false;
+function renderQuiz(){const q=quiz[quizIndex];document.getElementById('quizProgress').textContent=`Question ${quizIndex+1} of ${quiz.length} · Score ${quizScore}`;document.getElementById('quizQuestion').textContent=q.q;const choices=document.getElementById('quizChoices');choices.innerHTML='';q.answers.forEach((a,i)=>{const b=document.createElement('button');b.className='secondary';b.style.textAlign='left';b.textContent=a;b.addEventListener('click',()=>{if(answered)return;answered=true;const ok=i===q.correct;if(ok)quizScore++;document.getElementById('quizFeedback').textContent=(ok?'Correct! ':'Not quite. ')+q.why;document.getElementById('quizFeedback').style.color=ok?'#176b4d':'#963c35';document.getElementById('quizNext').style.display='inline-block';[...choices.children].forEach((el,j)=>{el.disabled=true;if(j===q.correct){el.style.background='#dff1e4';el.style.color='#176b4d';}});document.getElementById('quizProgress').textContent=`Question ${quizIndex+1} of ${quiz.length} · Score ${quizScore}`;});choices.appendChild(b);});document.getElementById('quizFeedback').textContent='';document.getElementById('quizNext').style.display='none';answered=false;}
+document.getElementById('quizNext').addEventListener('click',()=>{if(quizIndex<quiz.length-1){quizIndex++;renderQuiz();}else{document.getElementById('quizQuestion').textContent=`Quiz complete! You scored ${quizScore} out of ${quiz.length}.`;document.getElementById('quizChoices').innerHTML='';document.getElementById('quizFeedback').textContent=quizScore>=4?'Great work — you understand the key ideas.':'Good practice! Review the learning cards above and try again.';document.getElementById('quizNext').textContent='Try again';document.getElementById('quizNext').style.display='inline-block';document.getElementById('quizNext').onclick=()=>{quizIndex=0;quizScore=0;document.getElementById('quizNext').textContent='Next question';document.getElementById('quizNext').onclick=null;renderQuiz();};}});
+renderPlaces();renderTrip();renderQuiz();
+</script>
+</body>
+</html>
